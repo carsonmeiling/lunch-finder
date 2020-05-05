@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  const [bus, setBus] = useState([])
+
+  useEffect (() => {
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3.businesses/search?location=${'utah'}`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
+        },
+        params: {
+          term: 'food',
+        }
+      })
+        .then( res => {setBus(res.data)
+          console.log(bus)
+          debugger
+        })
+        .catch( err => {console.log(err)
+          debugger
+        })
+  })
+
+  return(
+    <div>
+      {bus ? <h2>Data</h2> : <h2>No Data</h2>}
     </div>
-  );
+  )
+  
 }
 
 export default App;

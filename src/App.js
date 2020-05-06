@@ -6,21 +6,21 @@ const App = () => {
   const [bus, setBus] = useState([])
 
   useEffect (() => {
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3.businesses/search?location=${'utah'}`,
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`,
       {
         headers: {
           Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
         },
         params: {
           term: 'food',
+          location: 'SLC',
+          limit: 20,
         }
       })
         .then( res => {setBus(res.data)
           console.log(bus)
-          debugger
         })
         .catch( err => {console.log(err)
-          debugger
         })
   })
 

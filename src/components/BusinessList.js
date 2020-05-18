@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BusinessList = () => {
+const BusinessList = (props) => {
 
    return(
       <>

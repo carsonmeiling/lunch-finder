@@ -4,6 +4,7 @@ import SeachForm from './SearchForm';
 
 const Home = () => {
   const [bus, setBus] = useState([])
+  
 
   const search = (term,location) => {
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`,

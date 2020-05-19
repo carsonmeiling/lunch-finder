@@ -15,22 +15,28 @@ const Home = () => {
         params: {
           term: 'food',
           location: 'SLC',
-          limit: 20,
+          limit: 5,
         }
       })
-        .then( res => {setBus(res.data)
+        .then( res => {setBus(res.data.businesses)
           console.log(bus)
+        
         })
         .catch( err => {console.log(err)
         })
-  })
+  },[])
 
+  let itemsToRender = bus;
+  console.log(itemsToRender)
+  if (bus){
+    itemsToRender = bus.map(b => {
+      return <div key={b.id}>{b.name}</div>
+    })
+  }
   return(
     <div>
       <h2>Home/landing page</h2>
-      <SeachForm />
-      {/* <BusinessList businesses={bus}/> */}
-
+      <div>{itemsToRender}</div>
     </div>
 
 

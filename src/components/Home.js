@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import SeachForm from './SearchForm';
+import BusinessList from './BusinessList';
 
 const Home = () => {
   const [bus, setBus] = useState([])
-  
 
-  const search = (term,location) => {
+  useEffect (() => {
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`,
       {
         headers: {
@@ -23,12 +23,14 @@ const Home = () => {
         })
         .catch( err => {console.log(err)
         })
-  }
+  })
 
   return(
     <div>
       <h2>Home/landing page</h2>
       <SeachForm />
+      <BusinessList businesses={bus}/>
+
     </div>
 
 

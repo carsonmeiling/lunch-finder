@@ -7,6 +7,7 @@ const SearchForm = () => {
 
    const handleSubmit = (e) => {
       e.preventDefault();
+      
 
    }
 

@@ -29,7 +29,7 @@ const Home = () => {
     <div>
       <h2>Home/landing page</h2>
       <SeachForm />
-      <BusinessList businesses={bus}/>
+      {/* <BusinessList businesses={bus}/> */}
 
     </div>
 

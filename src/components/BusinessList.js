@@ -1,17 +1,17 @@
 import React from 'react';
+import Home from './Home';
 
-const BusinessList = (props) => {
+const BusinessList = (businesses) => (
 
-   return(
+   
       <>
-         <h1>Business Search List</h1>
          {
-            props.bus.map(b => {
+            businesses.map(b => 
                <h1>{b.title}</h1>
-            })
+            )
          }
       </>
-   )
-}
+   
+)
 
 export default BusinessList;

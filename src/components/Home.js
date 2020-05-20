@@ -7,25 +7,14 @@ import BusinessDetails from './BusinessDetails';
 const Home = () => {
   const [bus, setBus] = useState([])
 
-  // let itemsToRender = bus;
-  // console.log(itemsToRender)
-  // if (bus){
-  //   itemsToRender = bus.map(b => {
-  //     return <div key={b.id}>
-  //       <h2>{b.name}</h2>
-  //       <p>{b.rating}</p>
-  //       <p>Price{b.price}</p>
-  //       </div>
-  //   })
-  // }
 
   return(
     <div>
-      <SearchForm setBus={setBus} />
       <h2>Home Page</h2>
+      <SearchForm setBus={setBus} />
       {
         bus.map(b => 
-          <BusinessList bus={b}/>
+          <BusinessList bus={b} key={b.id}/>
           )
       }
     </div>

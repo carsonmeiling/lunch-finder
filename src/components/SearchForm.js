@@ -34,8 +34,8 @@ const SearchForm = (props) => {
   }
 
    return(
-      <form onSubmit = {handleSubmit}>
-         <div>
+      <form onSubmit = {handleSubmit} className="search-form">
+         <div className="search">
             <label>Find</label>
             <input 
             type="text" 
@@ -44,7 +44,7 @@ const SearchForm = (props) => {
             onChange={e=>setTerm(e.target.value)}
             />
          </div>
-         <div>
+         <div className="search">
             <label>Near</label>
             <input 
             type="text" 
@@ -54,7 +54,7 @@ const SearchForm = (props) => {
             />
          </div>
          <div>
-            <button type="submit">Search</button>
+            <button type="submit" className='submit-btn'>Search</button>
          </div>
       </form>
    )

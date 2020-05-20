@@ -1,17 +1,18 @@
 import React from 'react';
 import Home from './Home';
+import { Link, Redirect } from 'react-router-dom';
 
-const BusinessList = (businesses) => (
-
-   
+const BusinessList = (props) => {
+   const { bus } = props
+   return(
       <>
-         {
-            businesses.map(b => 
-               <h1>{b.title}</h1>
-            )
-         }
-      </>
+         <div>
+            <h2>{bus.name}</h2>
+            <p>Price: {bus.price}</p>
+            <p>Rating: {bus.rating}</p>
+         </div>
+      </>   )
    
-)
+}
 
 export default BusinessList;

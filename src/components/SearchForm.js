@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 const SearchForm = (props) => {
@@ -10,6 +11,7 @@ const SearchForm = (props) => {
    const handleSubmit = (e) => {
       e.preventDefault();
       search(term, location)
+      
    }
 
    const search = (term, location) => {

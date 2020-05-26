@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useContext} from 'react';
-import axios from 'axios';
 import SearchForm from './SearchForm';
 import BusinessList from './BusinessList';
 import BusinessDetails from './BusinessDetails';

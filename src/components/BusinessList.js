@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Home from './Home';
 import BusinessDetails from './BusinessDetails';
 import { Link, Redirect } from 'react-router-dom';
+import {BizContext} from '../providers/BizProvider';
 
 const BusinessList = (props) => {
-   const { bus } = props
+   const { business } = props
+   // const [biz, setBiz] = useContext(BizContext)
+   // console.log(biz)
 
    
 
    return(
       <>
-         <Link to={`/business/${bus.id}`} bus={bus}>
+         <Link to={`/business/${business.id}`}>
             <div>
-               <h2>{bus.name}</h2>
-               <p> {bus.id}</p>
-               <p>Price: {bus.price}</p>
-               <p>Rating: {bus.rating}</p>
+               <h2>{business.name}</h2>
+               <p> {business.id}</p>
+               <p>Price: {business.price}</p>
+               <p>Rating: {business.rating}</p>
             </div>
          </Link>
       </>   )

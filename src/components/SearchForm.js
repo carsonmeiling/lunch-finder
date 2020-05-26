@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { BizContext } from '../providers/BizProvider';
 
 
 const SearchForm = (props) => {
 
   const [term , setTerm] = useState("")
   const [location , setLocation] = useState("")
+  const [biz, setBiz] = useContext(BizContext)
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -26,7 +28,10 @@ const SearchForm = (props) => {
           limit: 5,
         }
       })
-        .then( res => {props.setBus(res.data.businesses)
+        .then( res => {setBiz(res.data.businesses)
+
+         console.log("biz")
+         console.log(biz)
         
         })
         .catch( err => {console.log(err)

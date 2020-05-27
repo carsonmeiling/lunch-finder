@@ -12,10 +12,6 @@ const BusinessDetails = (props) => {
 
    return(
       <>
-         <Link to={{
-            pathname:'/',
-            state:{biz}
-         }}>Home</Link>
          <button onClick = {() => props.history.goBack()}>Go Back</button>
          <h2>{props.location.state.business.name}</h2>
       </>

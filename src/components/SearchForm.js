@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import { BizContext } from '../providers/BizProvider';
 
 
@@ -41,19 +40,23 @@ const SearchForm = (props) => {
    return(
       <form onSubmit = {handleSubmit} className="search-form">
          <div className="search">
-            <label>Find</label>
+            <label className="label">Find</label>
             <input 
+            className="input"
             type="text" 
             name="term"
+            placeholder="Lunch, Tacos, American..."
             value={term}
             onChange={e=>setTerm(e.target.value)}
             />
          </div>
          <div className="search">
-            <label>Near</label>
+            <label className="label">Near</label>
             <input 
+            className="input"
             type="text" 
             name="location"
+            placeholder="Zip, City, State ..."
             value={location}
             onChange={e=>setLocation(e.target.value)}
             />

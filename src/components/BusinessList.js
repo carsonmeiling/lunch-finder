@@ -1,13 +1,9 @@
-import React, { useState, useContext } from 'react';
-import Home from './Home';
-import { Link, Redirect } from 'react-router-dom';
-import {BizContext} from '../providers/BizProvider';
-import BusinessDetails from './BusinessDetails';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BusinessList = (props) => {
    const { business } = props
-   // const [biz, setBiz] = useContext(BizContext)
-   // console.log(biz)
+   
 
    
 

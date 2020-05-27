@@ -2,18 +2,60 @@
 .App {
   text-align: center;
 }
-
+/* Home */
 .home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
   height: 100vh;
-  background-color: bisque;
+  background-image: url("./images/kitchen.jpg");
+  background-size: cover;
 }
 
+.header {
+  margin: 10%;
+  font-size: 4em;
+  color: #162447;
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+/* Search */
 .search-form {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  position: relative;
+  align-items: center;
 }
 
 .search {
   padding: 0 1em 0 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.input{
+  min-width: 300px;
+  min-height: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+  outline: 0;
+  background-color: whitesmoke;
+  font-size: 1rem;
+}
+
+.label {
+  padding: 15px;
+  font-size: 2rem;
+  color: #162447;
+}
+
+.submit-btn {
+  background-color: #1b1b2f;
+  border-radius: 5px;
+  font-size: 1.5em;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
 }

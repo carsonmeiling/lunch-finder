@@ -1,8 +1,8 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, { useContext} from 'react';
 import SearchForm from './SearchForm';
 import BusinessList from './BusinessList';
-import BusinessDetails from './BusinessDetails';
 import {BizContext} from '../providers/BizProvider';
+
 
 
 
@@ -15,7 +15,7 @@ const Home = () => {
   
   return(
     <div className="home-page">
-      <h2 className="header">Business Search</h2>
+      <h2 className="header">Fork and Spoon</h2>
       <SearchForm />
       {
         biz.map(business => (

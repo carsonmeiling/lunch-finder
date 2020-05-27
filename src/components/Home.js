@@ -14,18 +14,22 @@ const Home = () => {
 
   
   return(
+    <>
     <div className="home-page">
-      <h2 className="header">Fork and Spoon</h2>
+      <h2 className="header">FORK AND SPOON</h2>
       <SearchForm />
+    </div>
+    <div className="bizList">
+
       {
         biz.map(business => (
           <BusinessList business={business} key={business.id}/>
           ))
-      
+          
         }
     </div>
 
-
+    </>
   )
   
 }

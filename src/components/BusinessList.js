@@ -9,19 +9,23 @@ const BusinessList = (props) => {
 
    return(
       <>
-            <div>
-               <Link to={{
+         <div className="bizCard">
+            <Link 
+                  className="link"
+                  to={{
                   pathname:'/business',
                   state:{business},
                   }}>
-               <h2>{business.name}</h2>
-               <h4>Address: {business.location.address1} {business.location.city},{business.location.state} {business.location.zip_code}</h4>
+               <h2 className="bizTitle">{business.name}</h2>
+               <h4 className="bizAddress">{business.location.address1} {business.location.city}, {business.location.state} {business.location.zip_code}</h4>
                
-               <p>Price: {business.price}</p>
-               <p>Rating: {business.rating}</p>
-               </Link>
-            </div>
-      </>   )
+               <p className="bizPrice">Price: {business.price}</p>
+               <p className="bizRating">Rating: {business.rating}/5</p>
+            </Link>
+         </div>
+         <hr/>
+      </>  
+   )
    
 }
 

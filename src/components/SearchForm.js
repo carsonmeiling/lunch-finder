@@ -45,7 +45,7 @@ const SearchForm = (props) => {
             className="input"
             type="text" 
             name="term"
-            placeholder="Lunch, Tacos, American..."
+            placeholder="Lunch, Tacos, American ..."
             value={term}
             onChange={e=>setTerm(e.target.value)}
             />

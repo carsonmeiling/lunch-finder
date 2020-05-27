@@ -59,3 +59,57 @@
   border: 1px solid whitesmoke;
   color: whitesmoke;
 }
+
+/* businessList */
+
+.bizList {
+  display: flex;
+  flex-direction: column;
+  background-color: #ececec;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #222831;
+  
+}
+.link{
+  text-decoration: none;
+}
+
+.bizCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.bizTitle, .bizAddress, .bizPrice, .bizRating {
+  color: #222831;
+}
+
+hr {
+  width: 100px;
+  border-top: 2px dotted #30475e;
+}
+
+/* Business Details */
+
+.back {
+  background-color: #30475e;
+  border-radius: 5px;
+  font-size: 1em;
+  border: 1px solid black;
+  color: #c1a57b;
+  margin: 15px;
+}
+
+.bizPage {
+  background-color: #ececec;
+  height: 100vh;
+}
+
+.buisnessDetails {
+}
+
+.bizName {
+  font-size: 2rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  
+}

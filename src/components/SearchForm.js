@@ -24,7 +24,7 @@ const SearchForm = (props) => {
         params: {
           term,
           location,
-          limit: 5,
+          limit: 20,
         }
       })
         .then( res => {setBiz(res.data.businesses)
